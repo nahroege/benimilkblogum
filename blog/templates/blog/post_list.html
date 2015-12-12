@@ -18,5 +18,12 @@
             <h2><a href="">İkinci gönderim</a></h2>
             <p>mefailün feilatün mefailün feilün. Ne kadar zevkli bir işmiş bilgisayarlarla uğraşmak. Artık bilgisayar başından kalkmam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
         </div>
+        {% for post in posts %}
+    <div>
+        <p>published: {{ post.yaratilis_tarihi }}</p>
+        <h1><a href="">{{ post.baslik }}</a></h1>
+        <p>{{ post.yazi|linebreaks }}</p>
+    </div>
+{% endfor %}
     </body>
 </html>
